@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 // 데이터에 접근하는 계층을 추상화하여 데이터 저장소와 상호 작용을 처리하는 리포지토리.
 @Repository
-public class TodoInMemoryRepository {
+public class TodoRepository {
     private final Map<Long, Todo> todoMap = new HashMap<>();
     private final AtomicLong counter = new AtomicLong();
 
