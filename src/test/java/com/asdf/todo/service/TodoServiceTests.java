@@ -75,7 +75,8 @@ public class TodoServiceTests {
 
     @Test
     void testUpdateTodo() throws Exception {
-        TodoRequestDto updatedTodo = new TodoRequestDto("Updated Todo", "Updated Description", true);
+        TodoRequestDto updatedTodo =
+                new TodoRequestDto("Updated Todo", "Updated Description", true);
         todoService.update(todo1Id, updatedTodo);
         TodoResponseDto todo = todoService.findById(todo1Id);
         assertThat(todo.getTitle()).isEqualTo("Updated Todo");
